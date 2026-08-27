@@ -11,6 +11,11 @@ const MEDIA_ASSET_PATHS = new Set([
   "series/rare-reports/rare-reports-spread-title-page.png",
 ]);
 
+const PAGE_SWAP_ASSET_PATHS = new Map([
+  ["images/rare-revolution-series-spread.png", "images/ads/insider.png"],
+  ["images/ads/insider.png", "images/rare-revolution-series-spread.png"],
+]);
+
 const normalizeRepositoryPath = (value: string) =>
   value
     .replace(/^public\//i, "")
@@ -56,7 +61,11 @@ export function resolveRepositoryRootAssetUrl(value?: string | null): string {
 
   if (isRemovedAssetPath(rawValue)) return "";
 
-  const normalizedPath = normalizeRepositoryPath(rawValue);
+  let normalizedPath = normalizeRepositoryPath(rawValue);
+
+  // Approved displayed-page swap: pages 92–93 use Insider and pages 94–95
+  // use Explore the Series. RARE INSIGHTS remains on pages 96–97.
+  normalizedPath = PAGE_SWAP_ASSET_PATHS.get(normalizedPath) || normalizedPath;
 
   // Serve large section-divider spreads through GitHub's media endpoint.
   // The authoritative files remain in their series folders on RRM/main.

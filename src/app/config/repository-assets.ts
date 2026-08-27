@@ -7,6 +7,8 @@ const REMOVED_ASSET_PATHS = new Set([
 
 const MEDIA_ASSET_PATHS = new Set([
   "series/people-of-rare/people-of-rare-spread-title-page.png",
+  "series/digital-spotlight/digital-spotlight-spread-title-page.png",
+  "series/rare-reports/rare-reports-spread-title-page.png",
 ]);
 
 const normalizeRepositoryPath = (value: string) =>
@@ -56,8 +58,8 @@ export function resolveRepositoryRootAssetUrl(value?: string | null): string {
 
   const normalizedPath = normalizeRepositoryPath(rawValue);
 
-  // Serve the large People of Rare spread through GitHub's media endpoint.
-  // The authoritative file remains at series/people-of-rare/ in RRM/main.
+  // Serve large section-divider spreads through GitHub's media endpoint.
+  // The authoritative files remain in their series folders on RRM/main.
   if (MEDIA_ASSET_PATHS.has(normalizedPath)) {
     return `https://media.githubusercontent.com/media/Joliel21/RRM/main/${normalizedPath}`;
   }

@@ -30,4 +30,4 @@ The runnable source was reconciled against the current `Joliel21/RRM` `main` ass
 
 Confirmed path updates include the current RARE INSIGHTS filenames, current section-divider locations under `series/`, current root ad locations under `images/ads/`, the Rare Siblings impact-report cover under `magazine-source/public/images/rare-pages/`, current cover URLs on `main`, and root-resolver handling for `images/brand/rare-revolution-trademark-logo.png` and `images/brand/rrm-intro-overlay.png`.
 
-Two legacy references remain intentionally unresolved because no matching asset exists on current `RRM/main`: `series-cover/resources.png` and `magazine-source/public/images/tea.png`. These were not guessed or silently replaced.
+The obsolete legacy asset paths `magazine-source/public/images/tea.png` and `series-cover/resources.png` were intentionally retired on 2026-08-26. The repository asset resolvers now return no URL for those paths, preventing the reader from requesting nonexistent files. No replacement artwork was guessed or substituted.

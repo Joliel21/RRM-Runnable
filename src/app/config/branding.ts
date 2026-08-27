@@ -1,5 +1,5 @@
 import { getBrandingCandidateUrls } from "@/app/config/data-source";
-import { resolveOrganizationAssetUrl, resolveRepositoryAssetUrl } from "@/app/config/repository-assets";
+import { resolveOrganizationAssetUrl, resolveRepositoryAssetUrl, resolveRepositoryRootAssetUrl } from "@/app/config/repository-assets";
 
 export interface BrandingConfig {
   publicationName: string;
@@ -107,11 +107,17 @@ export const loadBranding = async (): Promise<BrandingConfig> => {
 
       const loadedBranding = mergeBranding(JSON.parse(rawText));
       const isOrganizationBrand = url.includes("/organizations/");
+      const isDefaultRrmRootLogo =
+        !isOrganizationBrand &&
+        loadedBranding.logoUrl === "/images/brand/rare-revolution-trademark-logo.png";
+
       activeBranding = {
         ...loadedBranding,
         logoUrl: isOrganizationBrand
           ? resolveOrganizationAssetUrl(loadedBranding.logoUrl)
-          : resolveRepositoryAssetUrl(loadedBranding.logoUrl),
+          : isDefaultRrmRootLogo
+            ? resolveRepositoryRootAssetUrl(loadedBranding.logoUrl)
+            : resolveRepositoryAssetUrl(loadedBranding.logoUrl),
       };
       loaded = true;
       break;
@@ -123,7 +129,7 @@ export const loadBranding = async (): Promise<BrandingConfig> => {
   if (!loaded) {
     activeBranding = {
       ...DEFAULT_BRANDING,
-      logoUrl: resolveRepositoryAssetUrl(DEFAULT_BRANDING.logoUrl),
+      logoUrl: resolveRepositoryRootAssetUrl(DEFAULT_BRANDING.logoUrl),
     };
   }
 

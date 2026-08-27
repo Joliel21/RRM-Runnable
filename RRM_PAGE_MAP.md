@@ -9,13 +9,13 @@ Source of truth: `full-RRM.har` plus approved assets in `Joliel21/RRM`.
 - Printed pages 88–89: preserve current content; approved.
 - Printed pages 90–91: split `images/explore-more.png` across the two pages.
 - Printed pages 94–95: split `images/ads/insider.png` across the two pages.
-- Printed pages 96–97: split `images/rare-insights-spread.png` across the two pages.
+- Printed pages 96–97: split `series/rare-insights/rare-insights-spread-title-page.png` across the two pages.
 - Printed pages 112–113: split `images/ads/rare-youth.png` across the two pages (RARE Revolutionaries / Rare Youth).
 - Printed pages 128–129: Travel Series title page and archive. Page 128 uses `series/rare-insights/travel-series.png`; page 129 remains the Travel Series archive.
 - Printed pages 130–131: Turning the Tide for Rare Disease introduction/archive (shifted forward by Travel Series).
-- Printed pages 132–133: split `images/people-of-rare-spread.png` across the two pages.
+- Printed pages 132–133: split `series/people-of-rare/people-of-rare-spread-title-page.png` across the two pages.
 - Printed pages 140–143: use Community Gallery images from repository root `community/`.
-- Printed pages 144–145: split `images/digital-spotlight-spread.png` across the two pages.
+- Printed pages 144–145: split `series/digital-spotlight/digital-spotlight-spread-title-page.png` across the two pages.
 
 ## Travel Series (introduced 1.0.25; title artwork updated 1.0.27)
 - Printed page 128: Travel Series title page from `series/rare-insights/travel-series.png`.
@@ -29,7 +29,7 @@ Source of truth: `full-RRM.har` plus approved assets in `Joliel21/RRM`.
 - Back cover: exact HAR page 88, forced from the GitHub cover asset.
 
 ## Approved late-book sequence (1.0.25)
-- Printed pages 194–195: split `images/rare-reports-spread.png` across the two pages.
+- Printed pages 194–195: split `series/rare-reports/rare-reports-spread-title-page.png` across the two pages.
 - Printed pages 196–197: RARE Siblings introduction/archive.
 - Printed page 198: `magazine-source/public/images/bardet_biedl_syndrome.png` (static artwork; links are handled by HTML hotspots).
 - Printed page 199: `magazine-source/public/images/rare-pages/rare-siblings-impact-report-cover.png`.
@@ -59,10 +59,10 @@ All RARE INSIGHTS title/introduction pages use the approved assets from `series/
 - 98: A Day in the Life — `series/rare-insights/a-day-in-a-life.png`
 - 100: Charity & Advocacy — `series/rare-insights/charity-and-advocacy.png`
 - 102: Industry Insights — `series/rare-insights/industry-insights.png`
-- 104: Editors’ Letters — `series/rare-insights/editor-letters.png`
+- 104: Editors’ Letters — `series/rare-insights/editors-letters.png`
 - 106: Medical — `series/rare-insights/medical.png`
-- 108: News and Press Releases — `series/rare-insights/news_and-press_releases.png` (archive continues 109–111)
-- 114: Patient Voice — `series/rare-insights/patient_voice.png`
+- 108: News and Press Releases — `series/rare-insights/news-and-press-releases.png` (archive continues 109–111)
+- 114: Patient Voice — `series/rare-insights/patient-voice.png`
 - 116: Rare Caregiving — `series/rare-insights/rare-caregiving.png`
 - 118: Rare Ramblings — `series/rare-insights/rare-ramblings.png`
 - 120: Rare Rev-inar — `series/rare-insights/rare-rev-inar.png`

@@ -9,10 +9,10 @@ Final printed title-page assignments:
 - Page 98 — `series/rare-insights/a-day-in-a-life.png`
 - Page 100 — `series/rare-insights/charity-and-advocacy.png`
 - Page 102 — `series/rare-insights/industry-insights.png`
-- Page 104 — `series/rare-insights/editor-letters.png`
+- Page 104 — `series/rare-insights/editors-letters.png`
 - Page 106 — `series/rare-insights/medical.png`
-- Page 108 — `series/rare-insights/news_and-press_releases.png`
-- Page 114 — `series/rare-insights/patient_voice.png`
+- Page 108 — `series/rare-insights/news-and-press-releases.png`
+- Page 114 — `series/rare-insights/patient-voice.png`
 - Page 116 — `series/rare-insights/rare-caregiving.png`
 - Page 118 — `series/rare-insights/rare-ramblings.png`
 - Page 120 — `series/rare-insights/rare-rev-inar.png`
@@ -23,3 +23,11 @@ Final printed title-page assignments:
 - Page 130 — `series/rare-insights/turning-the-tide.png`
 
 No page numbers were added or removed in this release. Travel Series remains immediately after Sunday Sessions. No clickable SVGs are used.
+
+## 2026-08-26 repository reconciliation checkpoint
+
+The runnable source was reconciled against the current `Joliel21/RRM` `main` asset structure without changing page numbering or approved reader behavior.
+
+Confirmed path updates include the current RARE INSIGHTS filenames, current section-divider locations under `series/`, current root ad locations under `images/ads/`, the Rare Siblings impact-report cover under `magazine-source/public/images/rare-pages/`, current cover URLs on `main`, and root-resolver handling for `images/brand/rare-revolution-trademark-logo.png` and `images/brand/rrm-intro-overlay.png`.
+
+Two legacy references remain intentionally unresolved because no matching asset exists on current `RRM/main`: `series-cover/resources.png` and `magazine-source/public/images/tea.png`. These were not guessed or silently replaced.

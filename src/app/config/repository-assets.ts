@@ -26,7 +26,7 @@ export function resolveRepositoryAssetUrl(value?: string | null): string {
 }
 
 
-/** Resolve assets stored at the repository root (for example community/ and series-cover/). */
+/** Resolve assets stored at the repository root (for example community/, series/, images/ads/, and images/brand/). */
 export function resolveRepositoryRootAssetUrl(value?: string | null): string {
   const rawValue = String(value || "").trim();
   if (!rawValue) return "";

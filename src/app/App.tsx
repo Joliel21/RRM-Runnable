@@ -172,9 +172,9 @@ const PUBLIC_MAGAZINE_URL =
 const PAGE_STACK_OUTSIDE_WIDTH = 64;
 const DESKTOP_BREAKPOINT = 768;
 const EXACT_FRONT_COVER_URL =
-  "https://raw.githubusercontent.com/Joliel21/RRM/chatgpt-work/magazine-source/public/covers/rrm-front-cover-har-page-1.jpg";
+  "https://raw.githubusercontent.com/Joliel21/RRM/main/magazine-source/public/covers/rrm-front-cover-har-page-1.jpg";
 const EXACT_BACK_COVER_URL =
-  "https://raw.githubusercontent.com/Joliel21/RRM/chatgpt-work/magazine-source/public/covers/rrm-back-cover-har-page-88.jpg";
+  "https://raw.githubusercontent.com/Joliel21/RRM/main/magazine-source/public/covers/rrm-back-cover-har-page-88.jpg";
 
 const AUTO_SINGLE_PAGE_BREAKPOINT = 1120;
 const PHONE_SINGLE_PAGE_BREAKPOINT = 760;
@@ -4304,7 +4304,7 @@ finalPages.push(
               id: "insights-spread-page-94",
               pageNumber: 94,
               type: "image",
-              imageUrl: resolveRepositoryRootAssetUrl("/images/rare-insights-spread.png"),
+              imageUrl: resolveRepositoryRootAssetUrl("/series/rare-insights/rare-insights-spread-title-page.png"),
               alt: "RARE Revolution Insights spread",
               hotspots: [],
             },
@@ -4312,7 +4312,7 @@ finalPages.push(
               id: "insights-spread-page-95",
               pageNumber: 95,
               type: "image",
-              imageUrl: resolveRepositoryRootAssetUrl("/images/rare-insights-spread.png"),
+              imageUrl: resolveRepositoryRootAssetUrl("/series/rare-insights/rare-insights-spread-title-page.png"),
               alt: "RARE Revolution Insights spread",
               hotspots: [],
             },
@@ -4378,7 +4378,7 @@ finalPages.push(
               pageNumber: 102,
               type: "image",
               imageUrl: resolveRepositoryRootAssetUrl(
-                "/series/rare-insights/editor-letters.png",
+                "/series/rare-insights/editors-letters.png",
               ),
               alt: "RARE INSIGHTS Editors’ Letters title page",
               hotspots: [],
@@ -4431,7 +4431,7 @@ finalPages.push(
               pageNumber: 106,
               type: "image",
               imageUrl: resolveRepositoryRootAssetUrl(
-                "/series/rare-insights/news_and-press_releases.png",
+                "/series/rare-insights/news-and-press-releases.png",
               ),
               alt: "RARE INSIGHTS News and Press Releases title page",
               hotspots: [],
@@ -4498,7 +4498,7 @@ finalPages.push(
               pageNumber: 112,
               type: "image",
               imageUrl: resolveRepositoryRootAssetUrl(
-                "/series/rare-insights/patient_voice.png",
+                "/series/rare-insights/patient-voice.png",
               ),
               alt: "RARE INSIGHTS Patient Voice title page",
               hotspots: [],
@@ -4682,14 +4682,14 @@ finalPages.push(
               id: peopleOfRareLeftId,
               pageNumber: 128,
               type: "image",
-              imageUrl: resolveRepositoryRootAssetUrl("/images/people-of-rare-spread.png"),
+              imageUrl: resolveRepositoryRootAssetUrl("/series/people-of-rare/people-of-rare-spread-title-page.png"),
               alt: "People of Rare series spread, left page",
             },
             {
               id: peopleOfRareRightId,
               pageNumber: 129,
               type: "image",
-              imageUrl: resolveRepositoryRootAssetUrl("/images/people-of-rare-spread.png"),
+              imageUrl: resolveRepositoryRootAssetUrl("/series/people-of-rare/people-of-rare-spread-title-page.png"),
               alt: "People of Rare series spread, right page",
             },
             {
@@ -4774,14 +4774,14 @@ finalPages.push(
               id: "digital-spotlight-cover-page-140",
               pageNumber: 140,
               type: "image",
-              imageUrl: resolveRepositoryRootAssetUrl("/images/digital-spotlight-spread.png"),
+              imageUrl: resolveRepositoryRootAssetUrl("/series/digital-spotlight/digital-spotlight-spread-title-page.png"),
               alt: "Digital Spotlight opening spread, left page",
             },
             {
               id: "digital-spotlight-cover-page-141",
               pageNumber: 141,
               type: "image",
-              imageUrl: resolveRepositoryRootAssetUrl("/images/digital-spotlight-spread.png"),
+              imageUrl: resolveRepositoryRootAssetUrl("/series/digital-spotlight/digital-spotlight-spread-title-page.png"),
               alt: "Digital Spotlight opening spread, right page",
             },
             {
@@ -5189,7 +5189,7 @@ finalPages.push(
               pageNumber: 190,
               type: "image" as const,
               imageUrl: resolveRepositoryRootAssetUrl(
-                "/images/rare-reports-spread.png",
+                "/series/rare-reports/rare-reports-spread-title-page.png",
               ),
               alt: "RARE Reports spread, left page",
               hotspots: [],
@@ -5199,7 +5199,7 @@ finalPages.push(
               pageNumber: 191,
               type: "image" as const,
               imageUrl: resolveRepositoryRootAssetUrl(
-                "/images/rare-reports-spread.png",
+                "/series/rare-reports/rare-reports-spread-title-page.png",
               ),
               alt: "RARE Reports spread, right page",
               hotspots: [],
@@ -5238,7 +5238,7 @@ finalPages.push(
               id: "media-centre-spread-page-196",
               pageNumber: 200,
               type: "image",
-              imageUrl: resolveRepositoryRootAssetUrl("/shop.png"),
+              imageUrl: resolveRepositoryRootAssetUrl("/images/ads/Shop_Rare.png"),
               alt: "RARE Revolution shop notebook advertisement",
               hotspots: [],
             },
@@ -6390,7 +6390,7 @@ finalPages.push(
             }}
           />
           <img
-            src={resolveRepositoryAssetUrl("/images/brand/rrm-intro-overlay.png")}
+            src={resolveRepositoryRootAssetUrl("/images/brand/rrm-intro-overlay.png")}
             alt=""
             className="pointer-events-none absolute left-1/2 top-1/2 z-[2] h-auto max-h-[72vh] w-auto max-w-[72vw] -translate-x-1/2 -translate-y-1/2 object-contain"
             style={{

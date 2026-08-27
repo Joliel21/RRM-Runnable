@@ -5,6 +5,10 @@ const REMOVED_ASSET_PATHS = new Set([
   "series-cover/resources.png",
 ]);
 
+const MEDIA_ASSET_PATHS = new Set([
+  "series/people-of-rare/people-of-rare-spread-title-page.png",
+]);
+
 const normalizeRepositoryPath = (value: string) =>
   value
     .replace(/^public\//i, "")
@@ -51,6 +55,13 @@ export function resolveRepositoryRootAssetUrl(value?: string | null): string {
   if (isRemovedAssetPath(rawValue)) return "";
 
   const normalizedPath = normalizeRepositoryPath(rawValue);
+
+  // Serve the large People of Rare spread through GitHub's media endpoint.
+  // The authoritative file remains at series/people-of-rare/ in RRM/main.
+  if (MEDIA_ASSET_PATHS.has(normalizedPath)) {
+    return `https://media.githubusercontent.com/media/Joliel21/RRM/main/${normalizedPath}`;
+  }
+
   return `https://raw.githubusercontent.com/Joliel21/RRM/main/${normalizedPath}`;
 }
 

@@ -5,10 +5,19 @@ const REMOVED_ASSET_PATHS = new Set([
   "series-cover/resources.png",
 ]);
 
-const MEDIA_ASSET_PATHS = new Set([
-  "series/people-of-rare/people-of-rare-spread-title-page.png",
-  "series/digital-spotlight/digital-spotlight-spread-title-page.png",
-  "series/rare-reports/rare-reports-spread-title-page.png",
+const CDN_ASSET_PATHS = new Map([
+  [
+    "series/people-of-rare/people-of-rare-spread-title-page.png",
+    "02ea0d0702569c749766d658b001e982d2b9fbcf",
+  ],
+  [
+    "series/digital-spotlight/digital-spotlight-spread-title-page.png",
+    "1b618c2fe944e262d9fc2922697c05e4ed986529",
+  ],
+  [
+    "series/rare-reports/rare-reports-spread-title-page.png",
+    "0859802fd559d037c21653799110079e68330ed6",
+  ],
 ]);
 
 const PAGE_SWAP_ASSET_PATHS = new Map([
@@ -67,10 +76,12 @@ export function resolveRepositoryRootAssetUrl(value?: string | null): string {
   // use Explore the Series. RARE INSIGHTS remains on pages 96–97.
   normalizedPath = PAGE_SWAP_ASSET_PATHS.get(normalizedPath) || normalizedPath;
 
-  // Serve large section-divider spreads through GitHub's media endpoint.
-  // The authoritative files remain in their series folders on RRM/main.
-  if (MEDIA_ASSET_PATHS.has(normalizedPath)) {
-    return `https://media.githubusercontent.com/media/Joliel21/RRM/main/${normalizedPath}`;
+  // These three verified PNG title spreads do not render reliably from GitHub's
+  // raw/media hosts in the browser. Serve the same authoritative RRM/main files
+  // through jsDelivr, using each current blob SHA only as a cache-busting token.
+  const blobSha = CDN_ASSET_PATHS.get(normalizedPath);
+  if (blobSha) {
+    return `https://cdn.jsdelivr.net/gh/Joliel21/RRM@main/${normalizedPath}?v=${blobSha}`;
   }
 
   return `https://raw.githubusercontent.com/Joliel21/RRM/main/${normalizedPath}`;

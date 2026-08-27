@@ -1,0 +1,22 @@
+RRM MAGAZINE - RUN WITH NPM
+
+Open PowerShell in this folder. You do not need to run any .ps1 script.
+
+First time:
+  npm install
+
+Build:
+  npm run build
+
+Run development server:
+  npm run dev
+
+Vite will print the local URL, normally:
+  http://localhost:5173/
+
+To stop the development server:
+  Ctrl+C
+
+Notes:
+- A "deprecated recharts@2.15.2" message is an npm warning, not an installation failure.
+- This package intentionally does not include node_modules or package-lock.json. npm install creates a fresh lock file for your installed npm/Node environment.

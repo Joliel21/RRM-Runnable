@@ -1,0 +1,11 @@
+{
+  "pageNumber": 208,
+  "action": "replace",
+  "type": "spread-image",
+  "asset": "magazine-source/public/images/rare-pages/previous-editions-spread.png",
+  "spreadStartPage": 208,
+  "spreadEndPage": 209,
+  "spreadPosition": "left",
+  "alt": "Previous Editions",
+  "status": "approved"
+}

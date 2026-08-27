@@ -1,0 +1,13 @@
+{
+  "pageNumber": 215,
+  "action": "replace",
+  "type": "blank-with-watermark",
+  "watermarkAsset": "images/brand/watermark.png",
+  "watermarkPosition": {
+    "horizontal": "center",
+    "verticalPercent": 63,
+    "widthPercent": 40
+  },
+  "alt": "RARE Revolution inside back cover watermark only",
+  "status": "approved"
+}

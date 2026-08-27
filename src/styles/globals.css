@@ -1,0 +1,98 @@
+/* Scrollbars exist only while the magazine is zoomed. The zoomed reader is a
+   two-dimensional canvas so every part of a one-page or two-page view can be
+   reached with trackpad gestures, mouse wheel, keyboard arrows, or the bars. */
+.magazine-zoom-scrollbar {
+  overflow: scroll !important;
+  scrollbar-width: auto;
+  scrollbar-color: var(--brand-accent) color-mix(in srgb, var(--brand-ink) 72%, transparent);
+}
+
+.magazine-zoom-scrollbar::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.magazine-zoom-scrollbar::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--brand-ink) 72%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brand-accent) 35%, transparent);
+}
+
+.magazine-zoom-scrollbar::-webkit-scrollbar-thumb {
+  min-width: 52px;
+  min-height: 52px;
+  border: 3px solid color-mix(in srgb, var(--brand-ink) 72%, transparent);
+  border-radius: 999px;
+  background: var(--brand-accent);
+}
+
+.magazine-zoom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-accent-light);
+}
+
+.magazine-zoom-scrollbar::-webkit-scrollbar-corner {
+  background: color-mix(in srgb, var(--brand-ink) 90%, transparent);
+}
+
+/* Dedicated controls remain visible even when the browser uses overlay or
+   auto-hidden native scrollbars. */
+.magazine-custom-vertical-range {
+  width: 16px;
+  margin: 0;
+  padding: 0;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  appearance: auto;
+  accent-color: var(--brand-accent);
+  cursor: pointer;
+}
+
+.magazine-custom-horizontal-range {
+  width: 100%;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  appearance: auto;
+  accent-color: var(--brand-accent);
+  cursor: pointer;
+}
+
+@supports not (writing-mode: vertical-lr) {
+  .magazine-custom-vertical-range {
+    width: calc(100dvh - 120px);
+    height: 16px !important;
+    transform: rotate(-90deg);
+  }
+}
+
+
+
+/* Pages 90–93: permanently static content. No hover enlargement, pop, zoom,
+   transition, transform, animation, or browser image interaction. */
+[data-static-community-page="true"],
+[data-static-community-page="true"] *,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-90.png"]),
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-90.png"]) *,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-91.png"]),
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-91.png"]) *,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-92.png"]),
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-92.png"]) *,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-93.png"]),
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-93.png"]) * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  scale: 1 !important;
+  zoom: 1 !important;
+}
+
+[data-static-community-page="true"] img,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-90.png"]) > img,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-91.png"]) > img,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-92.png"]) > img,
+.relative.w-full.h-full:has(> img[src*="community-gallery-page-93.png"]) > img {
+  pointer-events: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  touch-action: none !important;
+}
